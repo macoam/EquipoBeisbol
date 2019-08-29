@@ -12,6 +12,7 @@ namespace EquipoBeisbol
         public string CiudadDeOrigen { get; set; }
         public string Entrenador { get; set; }
         public string Jugadores { get; set; }
+        public string Numero { get; set; }
 
         public List<Jugador> Jugadores1 { get; set; }
 
@@ -22,6 +23,12 @@ namespace EquipoBeisbol
             Entrenador = "Sin asignar";
             Jugadores = "Sin asignar";
         }
-      
+
+        public Equipo(string nombre, string numero)
+        {
+            Nombre = nombre;
+            Numero = numero;
+        }
+
     }
 }
