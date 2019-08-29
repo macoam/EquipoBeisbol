@@ -12,43 +12,44 @@ namespace EquipoBeisbol
         {
             List<Equipo> equipos = new List<Equipo>();
 
-            Equipo toros = new Equipo("Matemáticas", "MAT6622");
-            Equipo aguilas = new Equipo("Historia", "HTS1313");
+            Equipo aguilas = new Equipo("Águilas");
+            aguilas.Entrenador = "Luis Miguel";
+            aguilas.CiudadDeOrigen = "Hermosillo";
 
-            equipos.Add(toros);
+            aguilas.Jugadores.Add(new Jugador("Pedro", 7));
+            aguilas.Jugadores.Add(new Jugador("Ramón", 23));
+            aguilas.Jugadores.Add(new Jugador("Ulises", 9));
+            aguilas.Jugadores.Add(new Jugador("Arturo", 44));
+            aguilas.Jugadores.Add(new Jugador("Eduardo", 12));
+            aguilas.Jugadores.Add(new Jugador("Raúl", 3));
+            aguilas.Jugadores.Add(new Jugador("Kevin", 5));
+            aguilas.Jugadores.Add(new Jugador("Andrés", 99));
+            aguilas.Jugadores.Add(new Jugador("Jorge", 67));
+
+            Equipo toros = new Equipo("Toros");
+            toros.Entrenador = "Ricardo Montés";
+            toros.CiudadDeOrigen = "Ciudad Obregón";
+
+            toros.Jugadores.Add(new Jugador("Martín", 8));
+            toros.Jugadores.Add(new Jugador("Brayan", 83));
+            toros.Jugadores.Add(new Jugador("Elmer", 24));
+            toros.Jugadores.Add(new Jugador("Adán", 41));
+            toros.Jugadores.Add(new Jugador("Alberto", 16));
+            toros.Jugadores.Add(new Jugador("José", 2));
+            toros.Jugadores.Add(new Jugador("Ronaldo", 65));
+            toros.Jugadores.Add(new Jugador("Amador", 98));
+            toros.Jugadores.Add(new Jugador("Emiliano", 73));
+
             equipos.Add(aguilas);
-
-            Jugador elmer = new Jugador("Elmer", "78");
-            Jugador pablito = new Jugador("Pablito", "01");
-            Jugador bebitamoxita = new Jugador("BebitaMoxita", "56");
-            Jugador ezra = new Jugador("Ezra", "34");
-            Jugador kakaroto = new Jugador("Goku-san", "32");
-            Jugador linda = new Jugador("Linda", "01");
-            Jugador tadeo = new Jugador("Tadeo", "56");
-            Jugador carlos = new Jugador("Ezra", "34");
-            Jugador jhony = new Jugador("Goku-san", "32");
-
-
-            toros.Jugadores1.Add(elmer);
-            toros.Jugadores1.Add(bebitamoxita);
-            toros.Jugadores1.Add(linda);
-            toros.Jugadores1.Add(tadeo);
-            toros.Jugadores1.Add(carlos);
-            toros.Jugadores1.Add(jhony);
-            toros.Jugadores1.Add(pablito);
-            toros.Jugadores1.Add(kakaroto);
-            toros.Jugadores1.Add(ezra);
-   
+            equipos.Add(toros);
 
             foreach (Equipo equipo in equipos)
             {
-                Console.WriteLine("Equipo: " + equipo.Jugadores);
-                Console.WriteLine("Materia: " + equipo.Jugadores);
-                Console.WriteLine("Lista de alumnos: ");
+                Console.WriteLine("*" + equipo.Nombre + " de " + equipo.CiudadDeOrigen);
 
-                foreach (Jugador jugador in equipo.Jugadores1)
+                foreach(Jugador jugador in equipo.Jugadores)
                 {
-                    Console.WriteLine("-" + equipo.Nombre);
+                    Console.WriteLine("- " + jugador.Nombre + " " + jugador.Numero);
                 }
             }
 
